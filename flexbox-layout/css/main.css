@@ -102,24 +102,40 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 0 2em;
-  font-size: 1.25em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.25rem;
   height: 100%;
   color: #fff;
 }
 
 header,
 footer {
-  background-color: #222;
-  height: 80px;
+  background-color: #C5D86D;
   width: 100%;
+  padding: 1.50rem 0;
 }
 
+header h2 {
+    margin-top: -2%;
+}
+
+h1, h2, h3 {
+    color: #2E294E;
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+    padding: 0 1rem;
+}
+
+
+
 main {
-  background-color: #ccc;
+  background: white;
+  color: #1B998B;
   height: 250px;
-  width: 100%;
+}
+
+p {
+    padding: 0 1rem;
 }
 
 header,
@@ -131,6 +147,11 @@ main {
   align-items: center;
 }
 
+header,
+footer {
+    flex-direction: column;
+}
+
 #div-1,
 #div-2,
 #div-3 {
@@ -138,21 +159,23 @@ main {
   justify-content: center;
   align-items: center;
   color: #fff;
-  line-height: 1.5em;
-  font-size: 1.25em;
+  line-height: 1.5rem;
+  font-size: 1.25rem;
+  margin: 0 1rem 2rem 1rem;
 }
 
 .wrapper span {
   font-family: 'Lora', sans-serif;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 .flex-container {
   /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
     display: flex;
     flex-flow: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .flex-items {
@@ -160,12 +183,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  width: 30%;
-  height: 200px;
+  line-height: 1.5rem;
+  font-size: 1.6rem;
+  background-color: #1B998B;
+  width: 25%;
+}
+
+.social {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 5%;
 }
 
 /* ==========================================================================
@@ -248,21 +277,42 @@ main {
    Modify as content requires.
    ========================================================================== */
 
-@media all and (max-width: 768px) {
-    body {
-      padding: 1em;
+@media (max-width: 768px) {
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
+    .flex-items {
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
 }
 
 @media (min-width: 1200px) {
   #div-1,
   #div-2{
       /* set your flex value to 1 50% */
+
   }
 
   #div-3 {
     /* set your flex value to 1 100% */
-  }
+
+}
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }
 
 @media print,
